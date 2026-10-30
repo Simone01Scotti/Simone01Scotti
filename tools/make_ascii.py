@@ -20,8 +20,9 @@ def load(n, mirror=False):
         im = ImageOps.mirror(im); cx = im.width-1-cx
     return im, top, H, cx
 
-def frame(n, mirror=False, cols=COLS, rows=ROWS):
-    im, top, H, cx = load(n, mirror)
+def frame(n, mirror=False, cols=COLS, rows=ROWS, like=None):
+    im, top, H, cx = load(like or n, mirror)
+    if like: im = Image.open(f'cut_{n}.png').convert('RGBA')
     cw = 1.40*H; y0 = top-0.06*H; ch = 1.32*H
     box = (int(cx-cw/2), int(y0), int(cx+cw/2), int(y0+ch))
     c = im.crop(box)  # area fuori immagine -> trasparente
@@ -61,7 +62,7 @@ if __name__=='__main__':
         g,al,fd=frame(n,m)
         key=n+('m' if m else '')
         data[key]={'dark':to_ascii(g,al,fd,True),'light':to_ascii(g,al,fd,False)}
-    for n in ['40','41']:
-        g,al,fd=frame(n); data[n]={'dark':to_ascii(g,al,fd,True),'light':to_ascii(g,al,fd,False)}
+    for n,like in [('40a','39')]:
+        g,al,fd=frame(n,like=like); data[n]={'dark':to_ascii(g,al,fd,True),'light':to_ascii(g,al,fd,False)}
     json.dump(data, open('out/frames.json','w'), indent=0)
     print('\n'.join(data['39']['dark']))

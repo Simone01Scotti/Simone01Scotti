@@ -3,7 +3,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/head-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/head-light.svg">
-  <img src="./assets/head-light.svg" width="420" alt="Animated ASCII portrait of Simone turning his head">
+  <img src="./assets/head-light.svg" width="420" alt="Animated ASCII portrait of Simone chasing a bug, squashing it and nodding to ship it">
 </picture>
 
 # Hi, I'm Simone 👋
@@ -36,4 +36,4 @@ Day to day that means event-driven services with RabbitMQ and Spring Cloud Strea
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 
-<sub>The head above is plain text: 9 photos turned into ASCII frames and animated with CSS inside an SVG.</sub>
+<sub>The head above is plain text: 11 photos, in-between poses generated with optical flow, turned into ASCII and animated with CSS inside an SVG. Pipeline in <a href="./tools">/tools</a>.</sub>
