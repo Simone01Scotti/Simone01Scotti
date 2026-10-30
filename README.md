@@ -21,7 +21,7 @@ Day to day that means event-driven services with RabbitMQ and Spring Cloud Strea
 
 ### 🌱 What I'm building
 
-- **Compitum** — an open-source, self-hosted hub to organise and supervise AI coding agents (Claude Code, Codex, OpenCode) and their sessions across projects and devices. Named after the Roman crossroads.
+- **Compitum** — an open-source, self-hosted hub to organise and supervise AI coding agents (Claude Code, Codex, OpenCode) and their sessions across projects and devices. 
 - Small full-stack sites for local businesses and associations, plus the occasional Android side project.
 
 ### 🧰 Tech I use
